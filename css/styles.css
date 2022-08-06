@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Reset Style Rules */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.stats-pre-card-main-photo {
+    position: relative;
+    display: block;
+    width: 327px;
+    height: 780px;
+    outline: 1px solid red;
+}
+
+
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
