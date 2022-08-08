@@ -25,7 +25,7 @@ Users should be able to:
 
 - View the optimal layout depending on their device's screen size. This challenge/project has two layouts to create, one a mobile layout to be viewed at 375 px. and the second, a desktop layout to be viewed at 1440 px.
 
-**Note:** These two layouts will change responisvely relative to each layout's designed screen size. For example, the mobile view remains in place until 1249 px. and then the desktop view swaps in at 1250 px. as a starting place to begin to fulfill the 1440 px. desktop view requirement.
+**Note:** These two layouts will change responsively relative to each layout's designed screen size. For example, the mobile view remains in place until 1249 px. and then the desktop view swaps in at 1250 px. as a starting place to begin to fulfill the 1440 px. desktop view requirement.
 
 ### Screenshots
 
@@ -37,8 +37,8 @@ The screenshots below are from my finish challenge views. They're both shot from
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Repository — Solution Files](https://github.com/Stosh12/stats-preview-card-component.git)
+- Live Site URL: [GitHub Pages — Solution Website](https://stosh12.github.io/stats-preview-card-component/)
 
 ## My process
 
@@ -56,7 +56,7 @@ The screenshots below are from my finish challenge views. They're both shot from
 
 I believe my preplanning for CSS Flexbox is becoming more efficient. I used CSS Flexbox for the stats list and due to my structuring in HTML and CSS that list came together rather well without needing significant modifications after my preplanning.
 
-The most significant thing I learned was that one can swap out foreground images placed within the HTML with a CSS declaration per each media query. The delclartion contains the property, "content" with the value of the new image's URL, as shown in the CSS below. Without this ability to swap out foreground images, I would have had to use background images instead, which would work; but swapping out the foreground image was more efficient and used less code considering I was using a blending mode on that same image.
+The most significant thing I learned was that one can swap out foreground images placed within the HTML with a CSS declaration per each media query. The declaration contains the property, "content" with the value of the new image's URL, as shown in the CSS below. Without this ability to swap out foreground images, I would have had to use background images instead, which would work; but swapping out the foreground image was more efficient and used less code considering I was using a blending mode on that same image.
 
 Also, I learned about using blending modes with foreground images by using the CSS property "mix-blend-mode:", as shown in the CSS below.<br><br>
 
@@ -114,15 +114,15 @@ The below was used for the mobile view; but its "position", "display", "mix-blen
     opacity: 75%;
 }
 ```
-
+<br>
 
 ### Continued development
 
 I would like to continue working with Flexbox and getting even better with it. I have found that it can be more efficient and easier to use than standard CSS positioning. CSS Grid, which I didn't use in this project, is another alternative to Flexbox; but its another CSS styling technique or method I would like to continue learning more about.
 
-Now that I know I can swap out foreground images within a design per media query at different screen sizes, this opens up a whole new avenune and approach I can use with placing images into my code. I may nolonger need to use background images as much and can take advantage of some of the features that foreground images have over background images. The both have their pluses and munuses; knowing this give me more flexability for greater efficiency and better coding in the future.
+Now that I know I can swap out foreground images within a design per media query at different screen sizes, this opens up a whole new avenue and approach I can use with placing images into my code. I may no longer need to use background images as much and can take advantage of some of the features that foreground images have over background images. The both have their pluses and minuses; knowing this give me more flexibility for greater efficiency and better coding in the future.
 
-Another, takeaway is that I may contiunue to use the "mix-blend-mode" on future projects with foreground images when needed now that I know about it.
+Another, takeaway is that I may continue to use the "mix-blend-mode" on future projects with foreground images when needed now that I know about it.
 
 
 ### Useful resources
