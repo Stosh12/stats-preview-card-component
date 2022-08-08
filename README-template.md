@@ -16,7 +16,6 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -24,19 +23,17 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 
 Users should be able to:
 
-- View the optimal layout depending on their device's screen size
+- View the optimal layout depending on their device's screen size. This challenge/project has two layouts to create, one a mobile layout to be viewed at 375 px. and the second, a desktop layout to be viewed at 1440 px.
 
-### Screenshot
+**Note:** These two layouts will change responisvely relative to each layout's designed screen size. For example, the mobile view remains in place until 1249 px. and then the desktop view swaps in at 1250 px. as a starting place to begin to fulfill the 1440 px. desktop view requirement.
 
-![](./screenshot.jpg)
+### Screenshots
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+The screenshots below are from my finish challenge views. They're both shot from Safari on the Mac.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+![Mobile View for 375 px. Screen Widths](./images/readme-images/stats-preview-card-component-mobile-01-01.jpg)
+![Desktop View for 1440 px. Screen Widths](./images/readme-images/stats-preview-card-component-desktop-01-01.jpg)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
@@ -50,61 +47,97 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Visual Studio Code
+- MacDown to create the ReadMe file
+- Photoshop for layout templates and ReadMe file screenshot edits
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I believe my preplanning for CSS Flexbox is becoming more efficient. I used CSS Flexbox for the stats list and due to my structuring in HTML and CSS that list came together rather well without needing significant modifications after my preplanning.
 
-To see how you can add code snippets, see below:
+The most significant thing I learned was that one can swap out foreground images placed within the HTML with a CSS declaration per each media query. The delclartion contains the property, "content" with the value of the new image's URL, as shown in the CSS below. Without this ability to swap out foreground images, I would have had to use background images instead, which would work; but swapping out the foreground image was more efficient and used less code considering I was using a blending mode on that same image.
+
+Also, I learned about using blending modes with foreground images by using the CSS property "mix-blend-mode:", as shown in the CSS below.<br><br>
+
+#### HTML
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+  <div class="stats-pre-card-main-photo">
+  <img src="images/image-header-mobile.jpg" alt="Photo of three business ladies at their desks" width="100%" />
+	</div>
 ```
+<br>
+#### CSS with the "content" property
+
+The below was used with the only media query in this project, which uses a min-width of 1250px for mainly desktop displays. The "content" property with its URL value can be found at the bottom of the ".stats-pre-card-main-photo img" selector.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+@media screen and (min-width: 1250px) {
+
+.stats-pre-card-main-photo {
+    float: right;
+    width: 540px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: hsl(277, 64%, 61%);
+}
+.stats-pre-card-main-photo img {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    content: url(../images/image-header-desktop.jpg);
+}
+
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+<br>
+#### CSS with the "mix-blend-mode" property
+
+The below was used for the mobile view; but its "position", "display", "mix-blend-mode" and "opacity" properties cascade or carry on through to the desktop iteration of this CSS selector (.stats-pre-card-main-photo img) within the desktop media query for this project, which is shown below in the next CSS example. This "mix-blend-mode" property is used in the CSS selector, ".stats-pre-card-main-photo img", which contains the B & W foreground image. This blend mode is set to multiply with an opacity of 75%, which blends the B & W photo into the violet background color [ hsl(277, 64%, 61%) ] of its containing element or div, ".stats-pre-card-main-photo." The result creates the appearance similar to that of a sheet of transparent violet plastic or gel overlaying the B & W photo where only the values of black and violet are shown blended together.
+
+```css
+.stats-pre-card-main-photo {
+    position: relative;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: hsl(277, 64%, 61%);
+}
+.stats-pre-card-main-photo img {
+    position: relative;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    mix-blend-mode: multiply;
+    opacity: 75%;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I would like to continue working with Flexbox and getting even better with it. I have found that it can be more efficient and easier to use than standard CSS positioning. CSS Grid, which I didn't use in this project, is another alternative to Flexbox; but its another CSS styling technique or method I would like to continue learning more about.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Now that I know I can swap out foreground images within a design per media query at different screen sizes, this opens up a whole new avenune and approach I can use with placing images into my code. I may nolonger need to use background images as much and can take advantage of some of the features that foreground images have over background images. The both have their pluses and munuses; knowing this give me more flexability for greater efficiency and better coding in the future.
+
+Another, takeaway is that I may contiunue to use the "mix-blend-mode" on future projects with foreground images when needed now that I know about it.
+
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Changing image src depending on screen size](https://stackoverflow.com/questions/30460681/changing-image-src-depending-on-screen-size) - This code at the end of this thread helped me learn about swapping out foreground images via the "content" property in CSS. It swaps out the image src based upon media query screen size. 
+- [CSS mix-blend-mode Property](https://www.w3schools.com/cssref/pr_mix-blend-mode.asp) - This link speaks to blending a container with a red background with the image within the "img" element within it.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website — Porfolio - [Alan Perrow](https://apmail127.myportfolio.com)
+- Frontend Mentor - [@stosh12](https://www.frontendmentor.io/profile/stosh12)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+I give thanks to Frontend Mentor for creating and hosting these challenge, which have helped me learn more about front end Web Design coding!
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

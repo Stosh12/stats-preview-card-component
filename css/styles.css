@@ -8,19 +8,196 @@
     padding: 0;
     border: 0;
 }
-.stats-pre-card-main-photo {
+body{
+    background-color: hsl(233, 47%, 7%);
+}
+
+/* Mobile — below is the CSS for the card's main overall container. */
+
+.stats-pre-card {
     position: relative;
     display: block;
     width: 327px;
     height: 780px;
-    outline: 1px solid red;
+    /* background-image: url(../images/background-templates/mobile-design-template-50.jpg); */
+    background-color: hsl(244, 38%, 16%);
+    margin: 10% auto 0px auto;
+    border-radius: 15px;
+    /* border: 1px solid red; */
 }
 
+/* Mobile — below is the the CSS for the card's header image. */
 
+.stats-pre-card-main-photo {
+    position: relative;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: hsl(277, 64%, 61%);
+}
+.stats-pre-card-main-photo img {
+    position: relative;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    mix-blend-mode: multiply;
+    opacity: 75%;
+}
+
+/* Mobile — below is the CSS for the container for all of the card's text. */
+
+.container-all-text {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 540px;
+}
+
+/* Mobile — below is the CSS for all of the card's text. */
+
+h1 {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    color: hsl(0, 0%, 100%);
+    padding: 0px 30px 0px 30px;
+    margin: 40px 0px 0px 0px;
+}
+.violet-text {
+    color: hsl(277, 64%, 61%);
+}
+.discover-tag-line {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: hsla(0, 0%, 100%, 0.75);
+    padding: 0px 30px 0px 30px;
+    margin: 16px 0px 0px 0px;
+}
+.stats-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    height: 215px;
+    margin: 40px auto 0px auto;
+    /* outline: 1px solid red; */
+}
+.stat-01, .stat-02, .stat-03 {
+    display: block;
+    height: 55px;
+    /* outline: 1px solid red; */
+}
+.stat-number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+}
+.stat-name {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    color: hsla(0, 0%, 100%, 0.6);
+    margin: 7px 0px 0px 0px;
+}
+
+/* Card Attribution */
 
 .attribution {
-    font-size: 11px; text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+    color: hsl(228, 45%, 44%);
+    margin: 35px 0px 10% 0px;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(228, 45%, 56%);
+}
+.attribution a:hover {
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+@media screen and (min-width: 1250px) {
+
+/* Desktop — below is the CSS for the card's main overall container. */
+
+.stats-pre-card {
+    width: 1110px;
+    height: 446px;
+    /* background-image: url(../images/background-templates/desktop-design-template-50.jpg); */
+    /* border: 1px solid red; */
+}
+
+/* Desktop — below is the the CSS for the card's header image. */
+
+.stats-pre-card-main-photo {
+    float: right;
+    width: 540px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: hsl(277, 64%, 61%);
+}
+.stats-pre-card-main-photo img {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    content: url(../images/image-header-desktop.jpg);
+}
+
+/* Desktop — below is the CSS for the container for all of the card's text. */
+
+.container-all-text {
+    position: relative;
+    display: inline-block;
+    width: 390px;
+    height: 446px;
+    margin: 0px 0px 0px 72px;
+    /* outline: 1px solid red; */
+}
+
+/* Desktop — below is the CSS for all of the card's text. */
+
+h1 {
+    top: 71px;
+    width: 390px;
+    text-align: left;
+    font-size: 36px;
+    line-height: 44px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.discover-tag-line {
+    width: 390px;
+    text-align: left;
+    padding: 0px 0px 0px 0px;
+    margin: 96px 0px 0px 0px;
+}
+.stats-group {
+    flex-direction: row;
+    width: 350px;
+    height: fit-content;
+    margin: 73px 0px 0px 0px;
+}
+.stat-number {
+    text-align: left;
+}
+.stat-name {
+    text-align: left;
+}
+
 }
