@@ -1,91 +1,143 @@
-# Frontend Mentor - Stats preview card component
+# Frontend Mentor - Stats preview card component solution
 
-![Design preview for the Stats preview card component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Stats preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this card component and get it looking as close to the design as possible.
+Users should be able to:
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+- View the optimal layout depending on their device's screen size. This challenge/project has two layouts to create, one a mobile layout to be viewed at 375 px. and the second, a desktop layout to be viewed at 1440 px.
 
-Your users should be able to:
+**Note:** These two layouts will change responisvely relative to each layout's designed screen size. For example, the mobile view remains in place until 1249 px. and then the desktop view swaps in at 1250 px. as a starting place to begin to fulfill the 1440 px. desktop view requirement.
 
-- View the optimal layout depending on their device's screen size
+### Screenshots
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+The screenshots below are from my finish challenge views. They're both shot from Safari on the Mac.
 
-## Where to find everything
+![Mobile View for 375 px. Screen Widths](./images/readme-images/stats-preview-card-component-mobile-01-01.jpg)
+![Desktop View for 1440 px. Screen Widths](./images/readme-images/stats-preview-card-component-desktop-01-01.jpg)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### Links
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+## My process
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### Built with
 
-## Building your project
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- Visual Studio Code
+- MacDown to create the ReadMe file
+- Photoshop for layout templates and ReadMe file screenshot edits
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### What I learned
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+I believe my preplanning for CSS Flexbox is becoming more efficient. I used CSS Flexbox for the stats list and due to my structuring in HTML and CSS that list came together rather well without needing significant modifications after my preplanning.
 
-## Deploying your project
+The most significant thing I learned was that one can swap out foreground images placed within the HTML with a CSS declaration per each media query. The delclartion contains the property, "content" with the value of the new image's URL, as shown in the CSS below. Without this ability to swap out foreground images, I would have had to use background images instead, which would work; but swapping out the foreground image was more efficient and used less code considering I was using a blending mode on that same image.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+Also, I learned about using blending modes with foreground images by using the CSS property "mix-blend-mode:", as shown in the CSS below.<br><br>
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+#### HTML
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+```html
+  <div class="stats-pre-card-main-photo">
+  <img src="images/image-header-mobile.jpg" alt="Photo of three business ladies at their desks" width="100%" />
+	</div>
+```
+<br>
+#### CSS with the "content" property
 
-## Create a custom `README.md`
+The below was used with the only media query in this project, which uses a min-width of 1250px for mainly desktop displays. The "content" property with its URL value can be found at the bottom of the ".stats-pre-card-main-photo img" selector.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+```css
+@media screen and (min-width: 1250px) {
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+.stats-pre-card-main-photo {
+    float: right;
+    width: 540px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: hsl(277, 64%, 61%);
+}
+.stats-pre-card-main-photo img {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    content: url(../images/image-header-desktop.jpg);
+}
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+}
+```
+<br>
+#### CSS with the "mix-blend-mode" property
 
-## Submitting your solution
+The below was used for the mobile view; but its "position", "display", "mix-blend-mode" and "opacity" properties cascade or carry on through to the desktop iteration of this CSS selector (.stats-pre-card-main-photo img) within the desktop media query for this project, which is shown below in the next CSS example. This "mix-blend-mode" property is used in the CSS selector, ".stats-pre-card-main-photo img", which contains the B & W foreground image. This blend mode is set to multiply with an opacity of 75%, which blends the B & W photo into the violet background color [ hsl(277, 64%, 61%) ] of its containing element or div, ".stats-pre-card-main-photo." The result creates the appearance similar to that of a sheet of transparent violet plastic or gel overlaying the B & W photo where only the values of black and violet are shown blended together.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+```css
+.stats-pre-card-main-photo {
+    position: relative;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: hsl(277, 64%, 61%);
+}
+.stats-pre-card-main-photo img {
+    position: relative;
+    display: block;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    mix-blend-mode: multiply;
+    opacity: 75%;
+}
+```
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
 
-## Sharing your solution
+### Continued development
 
-There are multiple places you can share your solution:
+I would like to continue working with Flexbox and getting even better with it. I have found that it can be more efficient and easier to use than standard CSS positioning. CSS Grid, which I didn't use in this project, is another alternative to Flexbox; but its another CSS styling technique or method I would like to continue learning more about.
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+Now that I know I can swap out foreground images within a design per media query at different screen sizes, this opens up a whole new avenune and approach I can use with placing images into my code. I may nolonger need to use background images as much and can take advantage of some of the features that foreground images have over background images. The both have their pluses and munuses; knowing this give me more flexability for greater efficiency and better coding in the future.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+Another, takeaway is that I may contiunue to use the "mix-blend-mode" on future projects with foreground images when needed now that I know about it.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
 
-## Got feedback for us?
+### Useful resources
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+- [Changing image src depending on screen size](https://stackoverflow.com/questions/30460681/changing-image-src-depending-on-screen-size) - This code at the end of this thread helped me learn about swapping out foreground images via the "content" property in CSS. It swaps out the image src based upon media query screen size. 
+- [CSS mix-blend-mode Property](https://www.w3schools.com/cssref/pr_mix-blend-mode.asp) - This link speaks to blending a container with a red background with the image within the "img" element within it.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
-**Have fun building!** 🚀
+## Author
+
+- Website — Porfolio - [Alan Perrow](https://apmail127.myportfolio.com)
+- Frontend Mentor - [@stosh12](https://www.frontendmentor.io/profile/stosh12)
+
+
+## Acknowledgments
+
+I give thanks to Frontend Mentor for creating and hosting these challenge, which have helped me learn more about front end Web Design coding!
+
