@@ -68,6 +68,7 @@ Also, I learned about using blending modes with foreground images by using the C
 	</div>
 ```
 <br>
+
 #### CSS with the "content" property
 
 The below was used with the only media query in this project, which uses a min-width of 1250px for mainly desktop displays. The "content" property with its URL value can be found at the bottom of the ".stats-pre-card-main-photo img" selector.
@@ -93,6 +94,7 @@ The below was used with the only media query in this project, which uses a min-w
 }
 ```
 <br>
+
 #### CSS with the "mix-blend-mode" property
 
 The below was used for the mobile view; but its "position", "display", "mix-blend-mode" and "opacity" properties cascade or carry on through to the desktop iteration of this CSS selector (.stats-pre-card-main-photo img) within the desktop media query for this project, which is shown below in the next CSS example. This "mix-blend-mode" property is used in the CSS selector, ".stats-pre-card-main-photo img", which contains the B & W foreground image. This blend mode is set to multiply with an opacity of 75%, which blends the B & W photo into the violet background color [ hsl(277, 64%, 61%) ] of its containing element or div, ".stats-pre-card-main-photo." The result creates the appearance similar to that of a sheet of transparent violet plastic or gel overlaying the B & W photo where only the values of black and violet are shown blended together.
